@@ -45,7 +45,7 @@
         <meta name="if:Banner" content="0"/>
         <meta name="if:Navigation" content="1"/>
         <meta name="if:Sidebar" content="0"/>
-        <meta name="if:Sidebar Social Links" content="0"/>
+        <meta name="if:Social Links" content="0"/>
         <meta name="if:Sidebar Search" content="0"/>
         <meta name="if:Random Link" content="0"/>    
         <meta name="if:Archive Link" content="0"/>    
@@ -120,13 +120,11 @@
           
           <meta name="select:Banner Font" content="Karla" Title="Karla"/><meta name="select:Banner Font" content="Brawler" Title="Brawler"/><meta name="select:Banner Font" content="Ovo" Title="Ovo"/><meta name="select:Banner Font" content="Alegreya Sans" Title="Alegreya Sans"/><meta name="select:Banner Font" content="Arial" title="Arial"/><meta name="select:Banner Font" content="Cabin" Title="Cabin"/><meta name="select:Banner Font" content="courier new" title="Courier"/><meta name="select:Banner Font" content="Domine" title="Domine"/><meta name="select:Banner Font" content="Droid Sans" title="Droid Sans"/><meta name="select:Banner Font" content="Droid Serif" title="Droid Serif"/><meta name="select:Banner Font" content="Georgia" title="Georgia"/><meta name="select:Banner Font" content="Helvetica Neue" title="Helvetica Neue"/><meta name="select:Banner Font" content="Inconsolata" title="Inconsolata"/><meta name="select:Banner Font" content="Lato" title="Lato"/><meta name="select:Banner Font" content="Libre Baskerville" title="Libre Baskerville"/><meta name="select:Banner Font" content="Lora" title="Lora"/> <meta name="select:Banner Font" content="Mako" title="Mako"/><meta name="select:Banner Font" content="Merriweather" title="Merriweather"/><meta name="select:Banner Font" content="Muli" title="Muli"/><meta name="select:Banner Font" content="Montserrat" title="Montserrat"/><meta name="select:Banner Font" content="Noto Sans" title="Noto Sans"/><meta name="select:Banner Font" content="Oswald" title="Oswald"/><meta name="select:Banner Font" content="Playfair Display" title="Playfair Display"/><meta name="select:Banner Font" content="PT Mono" title="PT Mono"/><meta name="select:Banner Font" content="PT Sans" title="PT Sans"/><meta name="select:Banner Font" content="PT Serif" title="PT Serif"/><meta name="select:Banner Font" content="Raleway" title="Raleway"/><meta name="select:Banner Font" content="Roboto" title="Roboto"/><meta name="select:Banner Font" content="Roboto Condensed" title="Roboto Condensed"/><meta name="select:Banner Font" content="Roboto Slab" title="Roboto Slab"/><meta name="select:Banner Font" content="Source Sans Pro" title="Source Sans Pro"/><meta name="select:Banner Font" content="Times New Roman" title="Times New Roman"/><meta name="select:Banner Font" content="Work Sans" Title="Work Sans"/> 
   
-        <meta name="select:Logo Text" content="lowercase" Title="Lowercase"/><meta name="select:Logo Text" content="uppercase" Title="Uppercase"/><meta name="select:Logo Text" content="normal" Title="Normal"/>
+        <meta name="select:Logo Text" content="uppercase" Title="Uppercase"/><meta name="select:Logo Text" content="lowercase" Title="Lowercase"/><meta name="select:Logo Text" content="normal" Title="Normal"/>
         
         <meta name="select:Logo Size" content="24px" Title="M"/><meta name="select:Logo Size" content="40px" Title="XL"/><meta name="select:Logo Size" content="32px" Title="L"/><meta name="select:Logo Size" content="18px" Title="S"/><meta name="select:Logo Size" content="16px" Title="XS"/>
         
         <meta name="select:Navigation Text" content="uppercase" Title="Uppercase"/><meta name="select:Navigation Text" content="lowercase" Title="Lowercase"/><meta name="select:Navigation Text" content="normal" Title="Normal"/>
-        
-        <meta name="select:Post Columns" content="three" Title="3"/><meta name="select:Post Columns" content="four" Title="4"/>
 
     {/block:Hidden}
 
@@ -157,7 +155,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family={select:Body Font}:400,400italic,700,700italic">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family={select:Banner Font}:400,400italic,700,700italic">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family={select:Logo Font}:400,400italic,700,700italic">
-    <link href="http://static.tumblr.com/evx2wil/aUsobcm29/core.css" rel="stylesheet">
+    <link href="http://static.tumblr.com/evx2wil/75Iobcokv/core.css" rel="stylesheet">
     
     <style type="text/css">
         
@@ -880,7 +878,7 @@
             {/block:ifnavigation}
             
             
-            {block:ifSidebarSocialLinks}
+            {block:ifSocialLinks}
                 <nav class="sidebar-navigation widget">
                     <h3>Follow Me</h3>
                     <ul class="social-links-icons social-links">
@@ -898,7 +896,7 @@
                         {block:ifVimeoURL}<li><a href="{text:Vimeo URL}"><i class="fa fa-vimeo"></i><span>vimeo</span></a></li>{/block:ifVimeoURL}    
                     </ul>
                 </nav>
-            {/block:ifSidebarSocialLinks}
+            {/block:ifSocialLinks}
             
 
             {block:ShowDescription}
@@ -1025,6 +1023,22 @@
                         <li><a href="{RSS}" title="{lang:RSS}">{lang:RSS}</a></li>
                     {/block:ifRSSLink}
                 </ul>
+                
+                    {block:ifSocialLinks}
+                    <ul class="sidebar-social-links social-links">
+                        {block:ifInstagramURL}<li><a href="{text:Instagram URL}"><i class="fa fa-instagram"></i><span>instagram</span></a></li>{block:ifInstagramURL}
+                        {block:ifTwitterURL}<li><a href="{text:Twitter URL}"><i class="fa fa-twitter"></i><span>twitter</span></a></li>{/block:ifTwitterURL}
+                        {block:ifFacebookURL}<li><a href="{text:Facebook URL}"><i class="fa fa-facebook"></i><span>facebook</span></a></li>{/block:ifFacebookURL}
+                        {block:ifYoutubeURL}<li><a href="{text:Youtube URL}"><i class="fa fa-youtube"></i><span>youtube</span></a></li>{/block:ifYoutubeURL}  
+                        {block:ifSoundcloudURL}<li><a href="{text:Soundcloud URL}"><i class="fa fa-soundcloud"></i><span>soundcloud</span></a></li>{/block:ifSoundcloudURL}    
+                        {block:ifBehanceURL}<li><a href="{text:Behance URL}"><i class="fa fa-behance"></i><span>behance</span></a></li>{/block:ifBehanceURL}    
+                        {block:ifDribbbleURL}<li><a href="{text:Dribbble URL}"><i class="fa fa-dribbble"></i><span>dribbble</span></a></li>{/block:ifDribbbleURL}    
+                        {block:ifFlickrURL}<li><a href="{text:Flickr URL}"><i class="fa fa-flickr"></i><span>flickr</span></a></li>{/block:ifFlickrURL}   
+                        {block:ifLinkedinURL}<li><a href="{text:Linkedin URL}"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>{/block:ifLinkedinURL}    
+                        {block:ifPinterestURL}<li><a href="{text:Pinterest URL}"><i class="fa fa-pinterest"></i><span>pinterest</span></a></li>{/block:ifPinterestURL}    
+                        {block:ifVimeoURL}<li><a href="{text:Vimeo URL}"><i class="fa fa-vimeo"></i><span>vimeo</span></a></li>{/block:ifVimeoURL}    
+                    </ul>
+                    {/block:ifSocialLinks}
             </nav>
         {/block:ifnavigation}
 
